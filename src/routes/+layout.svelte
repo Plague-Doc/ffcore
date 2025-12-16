@@ -4,6 +4,7 @@
 	import SiteHeader from '$lib/components/site-header.svelte';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import { ffcore } from '$lib/utils/ffcore.svelte';
+	import { ModeWatcher } from 'mode-watcher';
 	import { onMount } from 'svelte';
 	import '../app.css';
 
@@ -17,6 +18,8 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
+
+<ModeWatcher />
 
 <Toaster position="top-center" richColors={true} />
 

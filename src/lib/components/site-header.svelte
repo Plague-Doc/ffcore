@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { SunMoon } from '@lucide/svelte';
+	import { toggleMode } from 'mode-watcher';
 	import { Button } from './ui/button';
 </script>
 
@@ -15,7 +17,9 @@
 		</div>
 
 		<div class="flex items-center gap-4">
-			<Button variant="ghost" href="/">IDK</Button>
+			<Button variant="ghost" size="icon" onclick={toggleMode}>
+				<SunMoon class="size-6" />
+			</Button>
 		</div>
 	</nav>
 </header>
